@@ -5,7 +5,7 @@ let w = (c.width = window.innerWidth),
 (hh = h / 2),
   (opts = {
     // change the text in here //
-    strings: ["HAPPY", "BIRTHDAY!", "to You", "Majo"],
+    strings: ["HAPPY", "BIRTHDAY!", "to You", "Lourdes"],
     charSize: 30,
     charSpacing: 35,
     lineHeight: 40,
@@ -148,9 +148,9 @@ Letter.prototype.step = function () {
         this.shards = [];
 
         var shardCount =
-            (opts.fireworkBaseShards +
-              opts.fireworkAddedShards * Math.random()) |
-            0,
+          (opts.fireworkBaseShards +
+            opts.fireworkAddedShards * Math.random()) |
+          0,
           angle = Tau / shardCount,
           cos = Math.cos(angle),
           sin = Math.sin(angle),
@@ -232,7 +232,7 @@ Letter.prototype.step = function () {
         (opts.balloonBaseSize + opts.balloonAddedSize * Math.random()) | 0;
 
       var rad =
-          opts.balloonBaseRadian + opts.balloonAddedRadian * Math.random(),
+        opts.balloonBaseRadian + opts.balloonAddedRadian * Math.random(),
         vel = opts.balloonBaseVel + opts.balloonAddedVel * Math.random();
 
       this.vx = Math.cos(rad) * vel;
@@ -378,11 +378,11 @@ for (let i = 0; i < opts.strings.length; ++i) {
       new Letter(
         opts.strings[i][j],
         j * opts.charSpacing +
-          opts.charSpacing / 2 -
-          (opts.strings[i].length * opts.charSize) / 2,
+        opts.charSpacing / 2 -
+        (opts.strings[i].length * opts.charSize) / 2,
         i * opts.lineHeight +
-          opts.lineHeight / 2 -
-          (opts.strings.length * opts.lineHeight) / 2
+        opts.lineHeight / 2 -
+        (opts.strings.length * opts.lineHeight) / 2
       )
     );
   }
